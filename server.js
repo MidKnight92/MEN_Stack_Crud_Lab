@@ -17,6 +17,9 @@ app.put('/dogs/:id', (req, res) => {
 	
 })
 
+app.create(req.body, (err, createdDog) => {
+	
+} )
 
 const connectionString = ('mongodb://localhost/dogs');
 

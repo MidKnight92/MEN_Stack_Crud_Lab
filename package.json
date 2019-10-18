@@ -2,7 +2,7 @@
   "name": "men_stack_crud_lab",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,7 @@
     "ejs": "^2.7.1",
     "express-middleware": "^3.4.2",
     "method-override": "^3.0.0",
-    "mongoose": "^5.7.5"
+    "mongoose": "^5.7.5",
+    "server": "^1.0.19"
   }
 }

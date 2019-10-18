@@ -1,0 +1,19 @@
+{
+  "name": "men_stack_crud_lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MidKnight92/MEN_Stack_Crud_Lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MidKnight92/MEN_Stack_Crud_Lab/issues"
+  },
+  "homepage": "https://github.com/MidKnight92/MEN_Stack_Crud_Lab#readme"
+}

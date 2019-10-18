@@ -34,9 +34,9 @@ app.get('dogs/new', (req, res) => {
 	res.render('new.ejs');
 })
 
-app.post('/dogs', (req, res) => {
-	console.log(req.body);
-})
+// // app.post('/', (req, res) => {
+// 	console.log(req.body);
+// })
 
 app.put('/dogs/:id', (req, res) => {
 	console.log(req.body, 'contents of the form');
@@ -52,6 +52,9 @@ app.get('dogs/:id', (req, res) => {
 	res.redirect('/dogs');
 })
 
+app.get('/dogs', (req, res) => {
+	res.render('index.ejs')
+})
 
 
 

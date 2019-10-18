@@ -9,9 +9,11 @@
 	<% for(let i = 0; i < dogs.length; i ++) { %>
 	
 	<li>
-		The <a href="/dogs/ <%=dogs[i]%>"> <%=dogs.name; %></a> is <%= dog.breed;%>
+		The <a href="/dogs/<%=dogs[i]%>"> <%=dogs.name; %></a> is <%= dog.breed;%>
 	</li>
-
+	<form action="/dogs/<&=dogs[i]._id%>?_method=DELETE"method="POST">
+		<button type='Submit'>Delete</button>
+	</form>
 	<% } %>
 	</ul>
 </body>

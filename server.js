@@ -5,27 +5,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const PORT = 3000;
 
-app.get('dogs/new', (req, res) => {
-	res.render('new.ejs');
-})
-
-app.post('/dogs/', (req, res) => {
-	console.log(req.body);
-})
-
-app.put('/dogs/:id', (req, res) => {
-	
-})
-
-app.create(req.body, (err, createdDog) => {
-	console.log(createdDog);
-	res.redirect('/dogs')
-} )
-
-app.get('dogs/;id', (req, res) => {
-	res.render('show.ejs');
-	res.redirect('/dogs');
-})
 
 const connectionString = ('mongodb://localhost/dogs');
 
@@ -48,13 +27,31 @@ mongoose.connection.on('error', (err) => {
   console.log(err, 'mongoose error');
 });
 
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 
-const dogSchema = new mongoose.Schema({
-	dog_name: {type: String required: true},
-	dog_breed: {type: String required: true}
-});
+app.get('dogs/new', (req, res) => {
+	res.render('new.ejs');
+})
 
-const Dog = mongoose.model('Dog', dogSchema);
+app.post('/dogs', (req, res) => {
+	console.log(req.body);
+})
+
+app.put('/dogs/:id', (req, res) => {
+	console.log(req.body, 'contents of the form');
+})
+
+app.post('/dogs', (err, createdDog) => {
+	console.log(createdDog);
+	res.redirect('/dogs')
+} )
+
+app.get('dogs/:id', (req, res) => {
+	res.render('show.ejs');
+	res.redirect('/dogs');
+})
+
 
 
 

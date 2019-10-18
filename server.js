@@ -8,6 +8,10 @@ app.get('/dogs/new', (req, res) => {
 	res.render('new.ejs');
 })
 
+app.post('/dogs/', (req, res) => {
+	console.log(req.body);
+})
+
 app.listen(PORT, () => {
 	console.log('Listening on '+ PORT);
 })

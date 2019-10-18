@@ -56,6 +56,18 @@ app.get('/dogs', (req, res) => {
 	res.render('index.ejs')
 })
 
+app.delete('/:id', (req, res) => {
+	
+	Dogs.deleteOne({_id: req.params.id}, (err, response) => {
+		if(err){
+			res.send(err);
+		} else {
+			console.log(response);
+			res.redirect('/dogs')
+		}
+	})
+})
+
 
 
 

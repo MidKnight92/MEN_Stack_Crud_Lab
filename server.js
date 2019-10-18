@@ -18,8 +18,13 @@ app.put('/dogs/:id', (req, res) => {
 })
 
 app.create(req.body, (err, createdDog) => {
-	
+	console.log(createdDog);
+	res.redirect('/dogs')
 } )
+
+app.get('dogs/;id', (req, res) => {
+	res.render('show.ejs')
+})
 
 const connectionString = ('mongodb://localhost/dogs');
 

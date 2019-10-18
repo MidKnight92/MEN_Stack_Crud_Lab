@@ -18,6 +18,7 @@
   "homepage": "https://github.com/MidKnight92/MEN_Stack_Crud_Lab#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
     "express-middleware": "^3.4.2",
     "method-override": "^3.0.0",
     "mongoose": "^5.7.5"

@@ -23,7 +23,8 @@ app.create(req.body, (err, createdDog) => {
 } )
 
 app.get('dogs/;id', (req, res) => {
-	res.render('show.ejs')
+	res.render('show.ejs');
+	res.redirect('/dogs');
 })
 
 const connectionString = ('mongodb://localhost/dogs');

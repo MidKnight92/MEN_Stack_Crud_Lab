@@ -12,6 +12,17 @@ app.post('/dogs/', (req, res) => {
 	console.log(req.body);
 })
 
+app.put('/dogs/:id', (req, res) => {
+	
+})
+
+
+
+
+
+
+
+
 app.listen(PORT, () => {
 	console.log('Listening on '+ PORT);
 })
